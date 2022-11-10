@@ -1,0 +1,26 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Carga de Productos
+form(action='/api/productos' method='post' style='width:50%; margin-left:25%; margin-top:15%')
+  h2(style='margin-left:350px' ) Nuevo Producto 
+  fieldset
+    br
+    br
+    label(for='title')
+      input#title(type='text' name='title' placeholder='Nombre ')
+    br
+    br
+    label(for='price')
+      input#price(type='number' name='price' placeholder='Precio')
+    br
+    br
+    label(for='price')
+      input#url(type='text' name='url' placeholder='Url / Imagen')
+    br
+    br
+    button(type='submit') Cargar producto
+    button(type='text')
+     a(href="./api/productos")  Ver productos 

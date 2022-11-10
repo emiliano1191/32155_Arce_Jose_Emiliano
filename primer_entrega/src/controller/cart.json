@@ -1,0 +1,23 @@
+[	
+	{
+		"title": "uva",
+		"price": "35",
+		"id": "034236b7-1760-40f3-9b13-5432f94ecbea",
+		"codigo": "e1e19661-6edf-483b-9477-85ad6fc274ae",
+		"stock": "150",
+		"descripcion": "fruta fresca",
+		"timestamp": "2022-11-06T16:40:47.074Z",
+		"img": "https://cdn4.iconfinder.com/data/icons/fruits-and-veggies-2/241/fruits-and-veggies-icons_grape-512.png"
+	},
+	{
+		"title": "naranja",
+		"price": "45",
+		"id": "6ef804cb-4eed-43b2-91d9-1067a4a1df26",
+		"codigo": "0619557b-55e1-4d02-a137-ed2dff32fe9c",
+		"stock": "120",
+		"descripcion": "frutas citricas",
+		"timestamp": "2022-11-07T20:23:03.173Z",
+		"img": "https://cdn4.iconfinder.com/data/icons/fruits-and-veggies-2/242/fruits-and-veggies-icons_orange-512.png"
+	}
+
+]

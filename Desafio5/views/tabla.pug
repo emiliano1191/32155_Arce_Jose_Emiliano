@@ -1,0 +1,21 @@
+div(style='width:50%; margin-left:25%; margin-top:10%') 
+  h1(style='margin-left:350px' ) Lista de productos
+  if productos.length
+    fieldset
+      table(style='width:100%')
+        tr  
+          th Nombre
+          th Precio
+          th Img
+        tr 
+         each val  in productos
+          tr  
+            th= val.title
+            th= val.price
+            td
+              img(style='width:50px; margin-left:100px' src= val.url)
+            br
+  else
+    p No hay productos
+  button(style='margin-left:200px' )
+    a(href="/") Cargar productos

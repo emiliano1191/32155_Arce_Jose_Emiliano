@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carga de Productos</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+
+   <h1>
+    Bienvenidos al TP 04
+   </h1> 
+  </header>
+
+  <form action="/api/productos" method="post"  >
+    <fieldset>   Agregar un Nuevo producto 
+      <br><br>
+      <label for="title">
+        <input type="text" id="title" name="title" placeholder="Nombre ">
+      </label>
+      <br><br>
+      <label for="price">
+        <input type="number" id="price" name="price" placeholder="Precio">
+      </label>
+      <br><br>
+      <button type="submit">Cargar producto</button>
+    </fieldset>
+  </form>
+
+</body>
+
+<div class="clearfix"></div>
+
+
+<footer>
+
+  J.E.A CODERHOUSE 2022 32155
+
+</footer>
+
+
+</html>

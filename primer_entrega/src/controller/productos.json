@@ -1,0 +1,41 @@
+[
+	{
+		"title": "coco",
+		"price": "200",
+		"id": "e0f97ba8-90d1-4bc5-9a3c-d4aaa2508aca",
+		"codigo": "f14eaf4b-81d0-48c2-aafa-b528628e250f",
+		"stock": "50",
+		"descripcion": "fruta fresca",
+		"timestamp": "2022-11-06T15:08:31.051Z",
+		"img": "https://cdn4.iconfinder.com/data/icons/fruits-and-veggies-2/217/fruits-and-veggies-icons_coconut-512.png"
+	},
+	{
+		"title": "uva",
+		"price": "35",
+		"id": "034236b7-1760-40f3-9b13-5432f94ecbea",
+		"codigo": "e1e19661-6edf-483b-9477-85ad6fc274ae",
+		"stock": "150",
+		"descripcion": "fruta fresca",
+		"timestamp": "2022-11-06T16:40:47.074Z",
+		"img": "https://cdn4.iconfinder.com/data/icons/fruits-and-veggies-2/241/fruits-and-veggies-icons_grape-512.png"
+	},
+	{
+		"title": "naranja",
+		"price": "45",
+		"id": "6ef804cb-4eed-43b2-91d9-1067a4a1df26",
+		"codigo": "0619557b-55e1-4d02-a137-ed2dff32fe9c",
+		"stock": "120",
+		"descripcion": "frutas citricas",
+		"timestamp": "2022-11-07T20:23:03.173Z",
+		"img": "https://cdn4.iconfinder.com/data/icons/fruits-and-veggies-2/242/fruits-and-veggies-icons_orange-512.png"
+	},
+	{
+		"title": "frutilla ",
+		"price": "50",
+		"id": "32094865-2fa6-490b-a9f6-253d971e2a3f",
+		"codigo": "f2bf6e54-c3a3-4a1b-908f-56490f6de9c0",
+		"stock": "100",
+		"descripcion": "fruta fresca de estacion",
+		"timestamp": "2022-11-10T20:44:04.602Z"
+	}
+]
