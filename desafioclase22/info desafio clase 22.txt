@@ -1,0 +1,14 @@
+---URLS---
+
+GET: localhost:8080/api/productos/fackerMock - mock con Facker de 5 productos al azar.
+
+
+/api/mensajes
+
+GET: '/todos' - Trae todos los mensajes de Mongo.
+GET: '/mormalizados' - Trae lo mensajes de Mongo y los normaliza. 
+GET: '/denormalizados' - Trae los mensajes de Mongo, los normaliza y luego los denormaliza nuevamente (no esta funcionando como debe!).
+
+
+
+
