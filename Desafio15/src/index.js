@@ -1,74 +1,25 @@
-// import mainRouter from './router/index.js';
-import cluster from 'cluster';
-import os from 'os';
-import express from 'express';
-import minimist from 'minimist';
-
-
-const optionalArgsObject = {
-  alias: {
-    m: 'modo',
-    p: 'port'
-  },
-  default: {
-    port: '8080',
-    modo: 'fork'
-  }
-};
-
-const args = minimist(process.argv.slice(2), optionalArgsObject);
-const modo = args.modo
-
-const CPUs = os.cpus().length;
-
+const express = require('express');
 const app = express();
+const minimist = require('minimist');
+const dotenv = require("dotenv");
 
-if (modo === 'cluster' && cluster.isPrimary) {
-  console.log(`cantidad de nucleos= ${CPUs}`);
-  console.log(`PID MASTER= ${process.pid}`);
-  for (let i = 0; i < CPUs; i++) {
-    cluster.fork()
-  }
-  cluster.on('exit', (worker, code) => {
-    console.log(`Worker ${worker.process.pid} with code ${code}`);
-    cluster.fork();
-  })
-} else {
+dotenv.config();
+const argumentos = minimist(process.argv.slice(2));
+const PORT = argumentos.puerto || 8080;
 
-  app.get('/api/randoms', (req, res) => {
+console.log(argumentos);
 
-    res.json({
-      pid: process.pid,
-      puerto:args.port,
-      msg: `/api/randoms`,
-    });
+app.get('/api/randoms', (req, res) => {
+  console.log('Resolving / endpoint');
+  res.json({
+    pid: process.pid,
+    msg: `Hola desde puerto ${PORT}`,
   });
+});
 
-  app.get('/', (req, res) => {
+app.listen(PORT, () =>
+  console.log(
+    `Servidor express escuchando en el puerto ${PORT} - PID WORKER ${process.pid}`
+  )
+);
 
-    res.json({
-      pid: process.pid,
-      msg: `Hola desde puerto ${args.port} `,
-    });
-  });
-
-  app.get('/info', (req, res) => {
-
-    console.log(`PID= ${process.pid}`)
-    console.log(CPUs);
-    res.json({
-      NumeroDeCPUs: CPUs,
-      SistemaOperativo: process.platform,
-      VersionNode: process.version,
-      MemoriaTotalReservada: JSON.stringify(process.memoryUsage()),
-      ProcessId: process.pid,
-      Puerto: args.port,
-      CarpetaProyecto: process.cwd()
-    })
-
-  });
-
-
-  app.listen(args.port, () => console.log(`Servidor express escuchando en el puerto ${args.port} - PID WORKER ${process.pid}`));
-
-};
